@@ -25,9 +25,10 @@ bot_name = config["ollama"]["name"]
 # Returns the latest message
 def ret_messages(channel_id):
     headers = {
-        "authorization" : config["discord"]["authorization"]
+        "authorization" : token
     }
     messages_obj = requests.get(f"https://discord.com/api/v8/channels/{channel_id}/messages", headers=headers)
+   
     return json.loads(messages_obj.text)[0]
 
 print("Discord Chatbot started!")

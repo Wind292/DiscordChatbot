@@ -41,7 +41,7 @@ discord:
 
 settings: 
   # Logs all of the prompts, responses, and who sent them
-  log: False  
+  log: True  
   
   # Replaces the @<bot> in the message to the bot name for the AI, this can sometimes confuse the bot. If set to false will just remove the @
   replace_@: False 
