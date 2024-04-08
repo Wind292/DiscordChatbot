@@ -1,0 +1,47 @@
+ollama:
+  # What should the AI call itself
+  name: Discord Bot
+
+  # How should the AI respond 
+  instructions:
+
+  # The LLM that your DiscordChatbot will use 
+  model: 
+  # YOU NEED TO PULL THE MODEL WITH `ollama pull <model name>` BEFORE YOU CAN USE IT!
+  # Recommended models:
+  ######################
+  # `llama:7b` and `llama-uncensored:7b` good starting models ~3.8GB.
+  # `llava:7b`~4GB `llava:34b` ~20GB Some of the only models that can use vision
+  # `gemma:2b` for slower/non-GPU machines, Very fast with decent responses ~2GB.
+  # `wizard-vicuna-uncensored:30b` powerful uncensored model ~20GB.
+  # Browse all models at https://ollama.com/library
+
+  # RAM requirements: 
+  # 7b,  ~8GB+  RAM
+  # 14b, ~16GB+ RAM
+  # 30b, ~32GB+ RAM
+  # 70b, ~64GB+ RAM
+
+  # The model has to support vision for it to be enabled 
+  vision: False
+
+
+discord:
+  # Token for your account, don't share it!
+  user_token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+  # Discord bot user id
+  user_id: 1234567890
+
+  # Channel for your bot to listen
+  channel_id: 1234567890
+
+  # You can find both of your 'channel_id' and 'user_id' by turning on 'developer mode' in Discord
+
+
+settings: 
+  # Logs all of the prompts, responses, and who sent them
+  log: False  
+  
+  # Replaces the @<bot> in the message to the bot name for the AI, this can sometimes confuse the bot. If set to false will just remove the @
+  replace_@: False 
